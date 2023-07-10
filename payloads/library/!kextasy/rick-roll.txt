@@ -1,0 +1,7 @@
+DUCKY_LANG US
+DELAY 2000
+GUI r
+DELAY 1000
+
+STRING powershell -w h -NoP -NonI -W Hidden Start-Process "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+ENTER
