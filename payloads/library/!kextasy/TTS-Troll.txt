@@ -12,28 +12,28 @@ GUI r
 
 DELAY 1000
 
-STRING "powershell"
+STRING powershell
 ENTER
 
 DELAY 2000
 
 
 
-STRING "Function Set-Speaker(\$Volume){\$wshShell = new-object -com wscript.shell;1..50 | % {\$wshShell.SendKeys([char]174)};1..\$Volume | % {\$wshShell.SendKeys([char]175)}}"
+STRING Function Set-Speaker($Volume){$wshShell = new-object -com wscript.shell;1..50 | % {$wshShell.SendKeys([char]174)};1..$Volume | % {$wshShell.SendKeys([char]175)}}
 ENTER
 DELAY 800
-STRING "Set-Speaker -Volume 50"
+STRING Set-Speaker -Volume 50
 ENTER
 DELAY 800
 
 
-STRING "Add-Type -AssemblyName System.speech"
+STRING Add-Type -AssemblyName System.speech
 ENTER
 DELAY 800
-STRING "\$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer"
+STRING $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 ENTER 
 DELAY 800
-STRING "\$speak.Speak('What up little bitch boy. You a bitch. A little bitch boy. Say it with me. I am a bitch boy. You fucking bitch boy ')"
+STRING $speak.Speak('What up little bitch boy. You a bitch. A little bitch boy. Say it with me. I am a bitch boy. You fucking bitch boy ')
 
 ENTER
 
